@@ -4,23 +4,40 @@ This repository contains a multimodule Android application built using modern An
 
 ## Project Structure
 
-    app: The main application module that serves as the entry point of the application. It depends on the other feature and core modules.
-    core:
-        core-ui: Contains common UI components, themes, and extensions used across the app.
-        core-network: Provides network configurations, API service interfaces, and Retrofit setup.
-        core-data: Manages data sources, repositories, and data-related business logic.
-    features:
-        feature-home: The home screen module that contains the main UI and logic for the home screen.
-        feature-details: A module for the details screen that displays detailed information about a selected item.
-    domain: Contains the domain layer with use cases, business rules, and interfaces that define the application's core behavior.
-    model: Defines the data models and entities used throughout the application.
+   - <b>app </b>: 
+   
+    The main application module that serves as the entry point of the application. It depends on the other feature and core modules.
 
-Technologies and Tools
+   - <b>feature_main </b>:
+   
+    The home screen module that contains the main UI and logic for the home screen.
+     
+   - <b>domain</b>: 
+    
+    Contains the domain layer with use cases, business rules, and interfaces that define the application's core behavior.
 
-    Kotlin 1.9.0: The programming language used for all modules.
-    Jetpack Compose: A modern toolkit for building native Android UI.
-    Dagger Hilt: Dependency injection library that simplifies the setup and usage of Dagger in Android apps.
-    Retrofit: A type-safe HTTP client for making network requests.
-    Coroutines: For managing asynchronous operations and threading.
-    Room: Database library for managing local data persistence.
-    Navigation Component: For handling navigation and deep linking between different parts of the app.
+   - <b>data</b>:
+
+    Contains repository implementations that interact with SharedPreferences and other data sources.
+
+   - <b>core_ui</b>:
+
+    Includes extensions and utilities specifically for Jetpack Compose, enhancing UI development.
+
+   - <b>core_utils</b>:
+
+    Provides various utility extensions used across the application for general-purpose functionality.    
+
+## Technologies and Tools
+
+- **Kotlin 1.9.0**: The programming language used for all modules.
+
+- **Jetpack Compose**: A modern toolkit for building native Android UI.
+
+- **Dagger Hilt**: Dependency injection library that simplifies the setup and usage of Dagger in Android apps.
+
+- **Coroutines**: For managing asynchronous operations and threading.
+
+- **Navigation Component**: For handling navigation and deep linking between different parts of the app.
+
+- **Flow**: A reactive stream API for handling asynchronous data flows and events.
