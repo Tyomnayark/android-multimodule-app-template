@@ -59,6 +59,13 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":feature_main"))
 
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.lifecycle.runtime.compose.android)
+    implementation(libs.androidx.appcompat)
+
     kapt(libs.dagger.hilt.compiler)
     implementation(libs.dagger.hilt)
 
