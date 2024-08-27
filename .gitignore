@@ -1,0 +1,12 @@
+
+*.tmp
+*.swp
+*.bak
+
+.idea/
+.gradle/
+
+local.properties
+gradlew
+gradlew.bat
+

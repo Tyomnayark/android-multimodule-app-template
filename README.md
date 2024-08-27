@@ -1,1 +1,1 @@
-# android-multimodule-app-template
+# Android multimodule app template
