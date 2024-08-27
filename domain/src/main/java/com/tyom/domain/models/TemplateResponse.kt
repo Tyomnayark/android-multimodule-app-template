@@ -1,5 +1,5 @@
 package com.tyom.domain.models
 
-data class Instrument(
+data class TemplateResponse(
     val name: String
 )

@@ -1,7 +1,7 @@
 package com.tyom.feature_main.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.tyom.domain.usecases.CheckHaveConnectedInstrumentUseCase
+import com.tyom.domain.usecases.TemplateUseCase
 import com.tyom.utils.launchOnDefault
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,18 +12,18 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val checkHaveConnectedInstrumentUseCase: CheckHaveConnectedInstrumentUseCase
+    private val templateUseCase: TemplateUseCase
 ) : ViewModel() {
     val _uiState = MutableStateFlow(MainUIState())
     val uiState: StateFlow<MainUIState> = _uiState.asStateFlow()
 
     init {
         launchOnDefault {
-            val instrument = checkHaveConnectedInstrumentUseCase.checkHaveConnectedInstrument()
+            val response = templateUseCase.templateUseCase()
 
             _uiState.update { state ->
                 state.copy(
-                    selectedInstrument = instrument
+                    templateResponse = response
                 )
             }
         }

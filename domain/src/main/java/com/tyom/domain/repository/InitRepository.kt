@@ -1,7 +1,7 @@
 package com.tyom.domain.repository
 
-import com.tyom.domain.models.Instrument
+import com.tyom.domain.models.TemplateResponse
 
 interface InitRepository {
-    suspend fun checkHaveConnectedInstrument(): Instrument?
+    suspend fun templateUseCase(): TemplateResponse?
 }
