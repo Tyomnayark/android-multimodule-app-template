@@ -54,9 +54,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":utils"))
+    implementation(project(":core_utils"))
     implementation(project(":domain"))
-    implementation(project(":model"))
+    implementation(project(":data"))
     implementation(project(":feature_main"))
 
     kapt(libs.dagger.hilt.compiler)
